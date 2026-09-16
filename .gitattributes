@@ -1,0 +1,8 @@
+# Store text files with LF in the repository, check out native line endings.
+# Prevents the whole-file CRLF diffs that Windows editors otherwise produce.
+* text=auto
+
+*.py    text diff=python
+*.md    text
+*.toml  text
+*.lock  text

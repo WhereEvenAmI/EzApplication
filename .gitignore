@@ -1,5 +1,27 @@
+# Environments
 .venv/
+venv/
+env/
 .env
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
+
+# Generated output
 generated_project/
+eval_results.json
+
+# IDE / editors
+.idea/
+.vs/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Scratch
+Claude outputs/
