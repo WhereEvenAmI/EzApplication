@@ -6,6 +6,7 @@ load_dotenv()
 from langchain_core.globals import set_debug, set_verbose
 
 from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 from prompts import *
 from states import *
@@ -64,7 +65,7 @@ def coder_agent(state: dict) -> dict:
 
     system_prompt = coder_system_prompt()
 
-    coder_tools = [read_file, write_file, get_current_directory]
+    coder_tools = [read_file, write_file, get_current_directory, list_files]
 
     react_agent = create_react_agent(llm, coder_tools)
     react_agent.invoke({"messages": [{"role": "system", "content": system_prompt},
